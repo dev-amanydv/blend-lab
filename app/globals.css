@@ -1,4 +1,13 @@
 @import "tailwindcss";
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+@theme {
+  --color-primary: #ffffff;
+  --color-primary-dark: #000000;
+}
+
 body {
-  background-color: #f7fafc; /* A light gray background */
+  background-color: #f7fafc;/* A light gray background */
+  background: no-repeat url("../public/bg-2.png");
 }
