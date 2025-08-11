@@ -1,3 +1,4 @@
+import PromptArea from "@/components/dashboard/PromptArea";
 import Sidebar from "@/components/Sidebar";
 import ThemeToggle from "@/components/ThemeToggle";
 import Image from "next/image";
@@ -21,6 +22,7 @@ export default function DaashboardLayout({
               </div>
               <div className="pt-13  min-h-screen">
               {children}
+              <PromptArea/>
               </div>
             </div>
           </div>
