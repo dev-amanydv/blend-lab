@@ -10,7 +10,7 @@ export default function ThemeToggle() {
 
   useEffect(() => setMounted(true), []);
 
-  if (!mounted) return null; // avoids hydration flash
+  if (!mounted) return null;
 
   return (
     <button

@@ -4,7 +4,7 @@ import React from 'react'
 
 export default function Explore() {
   return (
-    <div className="min-h-screen backdrop-blur-xl dark:bg-neutral-900 text-gray-800">
+    <div className="min-h-screen backdrop-blur-xl dark:bg-[#0A0A0A] text-gray-800">
       <PhotoGrid/>
     </div>
   )
