@@ -11,6 +11,7 @@ export default function page() {
       <h1 className='text-3xl bg-gradient-to-b text-transparent  from-blue-500 to-blue-300 bg-clip-text font-semibold'>
         Hello, Aman!
       </h1>
+      <PromptArea/>
     </div>
     </div>
   )

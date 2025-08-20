@@ -22,7 +22,6 @@ export default function DaashboardLayout({
               </div>
               <div className="pt-13  min-h-screen">
               {children}
-              <PromptArea/>
               </div>
             </div>
           </div>
