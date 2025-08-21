@@ -32,7 +32,6 @@ export default function PromptArea() {
         throw new Error(errorText || 'Failed to generate image');
       }
 
-      // Convert the image stream to a displayable format (Blob URL)
       const imageBlob = await response.blob();
       const imageUrl = URL.createObjectURL(imageBlob);
       setGeneratedImage(imageUrl);
@@ -69,7 +68,6 @@ export default function PromptArea() {
         </div>
       </div>
 
-      {/* Display Area */}
       <div className="bg-card p-6 rounded-lg shadow min-h-[300px] flex items-center justify-center">
         {isLoading && (
           <div className="text-center">

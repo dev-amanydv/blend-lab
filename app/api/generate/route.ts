@@ -18,19 +18,15 @@ export async function POST(req: NextRequest) {
       return new NextResponse('AI Engine URL is not configured', { status: 500 });
     }
     
-    // --- THE FIX IS HERE ---
-    // We need to send the prompt as URL-encoded form data, not JSON.
-    //const formData = new URLSearchParams({ prompt });
     const formData = new URLSearchParams();
     formData.append('prompt', prompt);
 
     const response = await fetch(`${AI_ENGINE_URL}/generate-image`, {
       method: 'POST',
       headers: {
-        // Change the content type to match the form data
         'Content-Type': 'application/x-www-form-urlencoded',
       },
-      body: formData.toString(), // Send the form data as a string.
+      body: formData.toString(), 
     });
 
     if (!response.ok) {
