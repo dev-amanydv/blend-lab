@@ -17,16 +17,13 @@ export async function POST(req: NextRequest) {
     if (!AI_ENGINE_URL) {
       return new NextResponse('AI Engine URL is not configured', { status: 500 });
     }
-    
-    const formData = new URLSearchParams();
-    formData.append('prompt', prompt);
 
     const response = await fetch(`${AI_ENGINE_URL}/generate-image`, {
       method: 'POST',
       headers: {
-        'Content-Type': 'application/x-www-form-urlencoded',
+        'Content-Type': 'application/json',
       },
-      body: formData.toString(), 
+      body: JSON.stringify({ prompt }), 
     });
 
     if (!response.ok) {
